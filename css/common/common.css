@@ -1,0 +1,76 @@
+.wrap {
+  max-width: 1200px;
+}
+h1 {
+  position: fixed;
+  top: -6666px;
+}
+h2 {
+  text-align: center;
+}
+h2 span {
+  color: #333;
+  font-size: 36px;
+  position: relative;
+}
+h2 span:after,
+h2 span:before {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+h2 span:before {
+  background-image: url("../images/title-r.png");
+  left: -60px;
+}
+h2 span:after {
+  background-image: url("../images/title-l.png");
+  right: -60px;
+}
+@media (max-width: 768px) {
+  h2 span {
+    font-size: 24px;
+  }
+}
+@media (max-width: 480px) {
+  h2 span {
+    font-size: 18px;
+  }
+}
+input[type="text"],
+select,
+option {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+select::-ms-expand {
+  display: none;
+}
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+a.survey {
+  display: inline-block;
+  width: 196px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background-color: #243a6d;
+  font-size: 18px;
+  color: #fff;
+}
+@media (max-width: 480px) {
+  a.survey {
+    width: 150px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+  }
+}
