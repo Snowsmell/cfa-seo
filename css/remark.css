@@ -109,7 +109,7 @@ a.survey:hover {
 .recommend ul li div h3 {
   color: #020202;
   font-size: 18px;
-  margin: 15px 0;
+  margin: 5px 0 15px;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;
@@ -533,351 +533,104 @@ nav.sidebar a.current span {
     left: 10px;
   }
 }
-.cost {
-  padding: 70px 20px;
-  background-color: #f5f6f9;
-  text-align: center;
+.review {
+  padding: 70px 20px 0;
+  background: #f7f7f7 url("../images/review.jpg") no-repeat bottom center;
 }
-.cost h2 {
-  color: #333;
-  font-size: 24px;
+.review section {
+  height: 400px;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+.review section .context:first-of-type {
+  margin-bottom: 50px;
+}
+.review section .context h3 {
+  color: #344b87;
   font-weight: 600;
-  text-align: left;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
-.cost dl {
-  overflow: hidden;
-  margin: 40px 0;
-  text-align: justify;
-}
-.cost dl dt {
-  border-left: 4px solid #666;
+.review section .context p {
+  width: 50%;
   color: #666;
-  font-weight: 600;
-  padding-left: 15px;
+  line-height: 30px;
   font-size: 16px;
 }
-.cost dl dd {
-  box-sizing: border-box;
-  transition: all .5s;
-  float: left;
-  width: 32%;
-  margin: 10px 2% 10px 0;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: bottom right;
+.review section .context p span {
+  margin-right: 40px;
 }
-.cost dl dd .imgbox img {
-  width: 100%;
+.review section .context p span b {
+  font-size: 40px;
+  font-weight: 400;
 }
-.cost dl dd .context {
-  box-sizing: border-box;
-  height: 200px;
-  padding: 20px 30px;
-}
-.cost dl dd h3 {
-  font-size: 22px;
-  color: #333;
-  font-weight: 600;
-  position: relative;
-  margin-bottom: 25px;
-}
-.cost dl dd h3:after {
-  position: absolute;
-  content: '';
-  width: 7%;
-  height: 2px;
-  background-color: #344b87;
-  bottom: -12.5px;
-  left: 0;
-}
-.cost dl dd p {
-  font-size: 16px;
-  color: #666;
-  line-height: 28px;
-}
-.cost dl dd:nth-of-type(3) {
+.review section .context p span:last-of-type {
   margin-right: 0;
 }
-.cost dl dd:hover {
-  box-shadow: 0 1px 12px 2px #ddd;
+.prepare {
+  padding: 70px 20px;
+  background-color: #fff;
+  text-align: center;
 }
-@media (max-width: 960px) {
-  .cost dl dt {
-    font-size: 16px;
-  }
-  .cost dl dd .context {
-    height: 150px;
-    padding: 10px 15px;
-  }
-  .cost dl dd h3 {
-    font-size: 18px;
-  }
-  .cost dl dd p {
-    font-size: 14px;
-    line-height: 24px;
-  }
+.prepare ul {
+  overflow: hidden;
+  margin: 30px 0;
+}
+.prepare ul li {
+  box-sizing: border-box;
+  padding: 0 1.5%;
+  float: left;
+  width: 33.33%;
+}
+.prepare ul li img {
+  max-width: 100%;
+}
+.prepare ul li h3 {
+  font-size: 20px;
+  color: #213768;
+  font-weight: 600;
+}
+.prepare ul li p {
+  font-size: 16px;
+  color: #666;
+  line-height: 30px;
+  text-align: justify;
 }
 @media (max-width: 768px) {
-  .cost {
+  .prepare {
     padding: 50px 20px;
-  }
-  .cost h2 {
-    font-size: 18px;
-  }
-  .cost dl dd p {
-    font-size: 12px;
-    line-height: 20px;
   }
 }
 @media (max-width: 640px) {
-  .cost dl dt {
-    font-size: 14px;
-  }
-  .cost dl dd {
+  .prepare ul li {
     width: 100%;
-    float: none;
-    margin: 10px 0 0;
+    margin-top: 10px;
+    padding: 0;
   }
-  .cost dl dd p {
+  .prepare ul li img {
+    float: left;
+    width: 95px;
+  }
+  .prepare ul li div {
+    margin-left: 100px;
+  }
+  .prepare ul li div h3 {
+    text-align: left;
+    font-size: 18px;
+  }
+  .prepare ul li div p {
     font-size: 14px;
     line-height: 22px;
   }
+  .prepare ul li:first-of-type {
+    margin-top: 0;
+  }
 }
 @media (max-width: 480px) {
-  .cost {
+  .prepare {
     padding: 20px;
   }
-  .cost h2 {
-    font-size: 14px;
-  }
-  .cost > p {
-    font-size: 12px;
-  }
-  .cost dl {
+  .prepare ul {
     margin: 20px 0;
-  }
-}
-.detail {
-  padding: 70px 20px;
-  background: url("../images/timecost-bg.jpg") no-repeat center center;
-  background-size: cover;
-}
-.detail h2 {
-  font-size: 24px;
-  color: #fff;
-  text-align: left;
-  margin-bottom: 25px;
-}
-.detail section {
-  margin-top: 50px;
-}
-.detail section:first-of-type {
-  margin-top: 0;
-}
-.detail section .imgbox {
-  text-align: center;
-  overflow-x: auto;
-}
-.detail section .imgbox img {
-  max-width: 100%;
-  min-width: 960px;
-}
-.detail .caution {
-  margin-top: 25px;
-  position: relative;
-}
-.detail .caution p {
-  padding-left: 22px;
-  position: relative;
-  font-size: 14px;
-  color: #ced2da;
-  font-style: italic;
-  text-align: left;
-  min-height: 21px;
-}
-.detail .caution p span {
-  position: absolute;
-  width: 22px;
-  top: 0;
-  left: 0;
-}
-.detail .caution a.survey {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  color: #985b00;
-  background-image: -moz-linear-gradient(-180deg, #fabb12 0%, #fdd921 100%);
-  background-image: -webkit-linear-gradient(-180deg, #fabb12 0%, #fdd921 100%);
-  background-image: -ms-linear-gradient(-180deg, #fabb12 0%, #fdd921 100%);
-}
-@media (max-width: 768px) {
-  .detail {
-    padding: 50px 20px;
-  }
-}
-@media (max-width: 640px) {
-  .detail .caution a.survey {
-    position: static;
-    display: block;
-    margin: 15px auto 0;
-  }
-}
-@media (max-width: 480px) {
-  .detail {
-    padding: 20px;
-  }
-  .detail h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  .detail section {
-    margin-top: 20px;
-  }
-}
-.scholarship {
-  background-color: #f5f6f9;
-  padding: 70px 20px;
-}
-.scholarship .wrap > p {
-  text-align: center;
-  font-size: 18px;
-  color: #666;
-}
-.scholarship .wrap ul {
-  overflow: hidden;
-  margin-top: 50px;
-}
-.scholarship .wrap ul li {
-  float: left;
-  width: 24%;
-  margin: 0 14% 10px 0;
-  height: 310px;
-  transition: all .5s;
-}
-.scholarship .wrap ul li:last-of-type {
-  margin-right: 0;
-}
-.scholarship .wrap ul li .imgbox {
-  height: 90px;
-}
-.scholarship .wrap ul li .imgbox img {
-  max-width: 100%;
-}
-.scholarship .wrap ul li h3 {
-  font-size: 24px;
-  color: #333;
-  margin: 20px 0;
-}
-.scholarship .wrap ul li p {
-  font-size: 16px;
-  color: #999;
-  line-height: 30px;
-  height: 90px;
-  text-align: left;
-}
-.scholarship .wrap ul li .questions a {
-  display: block;
-  background-color: #fff;
-  color: #666;
-  transition: all .5s;
-  height: 36px;
-  line-height: 36px;
-  margin-top: 10px;
-  padding-left: 20px;
-  box-sizing: border-box;
-}
-.scholarship .wrap ul li .questions a:first-of-type {
-  margin-top: 0;
-}
-.scholarship .wrap ul li .questions a:hover {
-  color: #344b87;
-}
-.scholarship .wrap ul li a.survey {
-  width: 130px;
-  font-size: 16px;
-  height: 36px;
-  line-height: 36px;
-  margin-top: 20px;
-}
-@media (max-width: 960px) {
-  .scholarship .wrap > p {
-    font-size: 14px;
-  }
-  .scholarship .wrap ul li {
-    width: 30%;
-    margin: 0 5% 10px 0;
-  }
-  .scholarship .wrap ul li h3 {
-    margin: 10px 0;
-    font-size: 20px;
-  }
-  .scholarship .wrap ul li p {
-    font-size: 14px;
-    line-height: 26px;
-    height: 78px;
-  }
-  .scholarship .wrap ul li .questions {
-    font-size: 14px;
-  }
-  .scholarship .wrap ul li .questions a {
-    line-height: 30px;
-    height: 30px;
-    padding-left: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .scholarship {
-    padding: 50px 20px;
-  }
-  .scholarship .wrap > p {
-    font-size: 12px;
-  }
-  .scholarship .wrap ul {
-    margin-top: 30px;
-  }
-  .scholarship .wrap ul li {
-    width: 46%;
-    margin: 0 8% 15px 0;
-    text-align: center;
-    height: 280px;
-  }
-  .scholarship .wrap ul li:nth-of-type(2n) {
-    margin-right: 0;
-  }
-  .scholarship .wrap ul li a.survey {
-    margin-top: 10px;
-  }
-}
-@media (max-width: 640px) {
-  .scholarship .wrap ul li h3 {
-    font-size: 18px;
-  }
-  .scholarship .wrap ul li p {
-    font-size: 12px;
-    line-height: 24px;
-    height: 72px;
-    overflow: hidden;
-  }
-  .scholarship .wrap ul li .questions {
-    font-size: 12px;
-  }
-}
-@media (max-width: 480px) {
-  .scholarship {
-    padding: 20px;
-  }
-  .scholarship .wrap ul {
-    margin-top: 20px;
-  }
-  .scholarship .wrap ul li {
-    float: none;
-    width: 100%;
-    margin: 10px auto;
-    height: 240px;
-  }
-  .scholarship .wrap ul li p {
-    line-height: 24px;
-    height: 48px;
-    text-align: center;
   }
 }

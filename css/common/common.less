@@ -120,11 +120,13 @@ a.survey {
                 h3 {
                     color: #020202;
                     font-size: 18px;
-                    margin: 15px 0;
+                    margin: 5px 0 15px;
                     .spill(1);
                 }
                 p {
                     font-size: 16px;
+                    line-height: 24px;
+                    max-height: 72px;
                     color: #999;
                     text-align: justify;
                     .spill(3);
@@ -150,10 +152,14 @@ a.survey {
                     padding: 15px;
                     h3 {
                         font-size: 16px;
+                        line-height: 20px;
+                        max-height: 20px;
                         margin: 0 0 10px;
                     }
                     p {
                         font-size: 14px;
+                        line-height: 20px;
+                        max-height: 60px;
                     }
                 }
             }
@@ -164,8 +170,11 @@ a.survey {
             li {
                 width: 48%;
                 margin: 0 4% 10px 0;
-                &:nth-of-type(2n) {
-                    margin-right: 0;
+                &:nth-of-type(n+3) {
+                    display: none;
+                }
+                &:nth-of-type(2n){
+                    margin: 0;
                 }
                 div {
                     padding: 15px;
@@ -187,11 +196,14 @@ a.survey {
             margin-top: 20px;
             li {
                 div {
+                    height: 100px;
                     h3 {
                         font-size: 14px;
                     }
                     p {
                         font-size: 12px;
+                        line-height: 18px;
+                        max-height: 54px;
                         .spill(3);
                     }
                 }

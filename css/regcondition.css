@@ -69,6 +69,11 @@ a.survey {
   color: #fff;
   transition: all .5s;
 }
+a.survey:hover {
+  background-image: -moz-linear-gradient(0deg, #2c4078 0%, #1a2d56 100%);
+  background-image: -webkit-linear-gradient(0deg, #2c4078 0%, #1a2d56 100%);
+  background-image: -ms-linear-gradient(0deg, #2c4078 0%, #1a2d56 100%);
+}
 @media (max-width: 480px) {
   a.survey {
     width: 150px;
@@ -76,11 +81,6 @@ a.survey {
     line-height: 36px;
     font-size: 14px;
   }
-}
-a.survey:hover {
-  background-image: -moz-linear-gradient(0deg, #2c4078 0%, #1a2d56 100%);
-  background-image: -webkit-linear-gradient(0deg, #2c4078 0%, #1a2d56 100%);
-  background-image: -ms-linear-gradient(0deg, #2c4078 0%, #1a2d56 100%);
 }
 .recommend {
   padding: 70px 20px;
@@ -118,6 +118,8 @@ a.survey:hover {
 }
 .recommend ul li div p {
   font-size: 16px;
+  line-height: 24px;
+  max-height: 72px;
   color: #999;
   text-align: justify;
   overflow: hidden;
@@ -145,10 +147,14 @@ a.survey:hover {
   }
   .recommend ul li div h3 {
     font-size: 16px;
+    line-height: 20px;
+    max-height: 20px;
     margin: 0 0 10px;
   }
   .recommend ul li div p {
     font-size: 14px;
+    line-height: 20px;
+    max-height: 60px;
   }
 }
 @media (max-width: 640px) {
@@ -156,8 +162,11 @@ a.survey:hover {
     width: 48%;
     margin: 0 4% 10px 0;
   }
+  .recommend ul li:nth-of-type(n+3) {
+    display: none;
+  }
   .recommend ul li:nth-of-type(2n) {
-    margin-right: 0;
+    margin: 0;
   }
   .recommend ul li div {
     padding: 15px;
@@ -178,11 +187,16 @@ a.survey:hover {
   .recommend ul {
     margin-top: 20px;
   }
+  .recommend ul li div {
+    height: 100px;
+  }
   .recommend ul li div h3 {
     font-size: 14px;
   }
   .recommend ul li div p {
     font-size: 12px;
+    line-height: 18px;
+    max-height: 54px;
     overflow: hidden;
     display: -webkit-box;
     word-break: break-all;

@@ -1,5 +1,5 @@
 @import "./common/common.less";
-nav.sidebar {
+nav.sidebar { 
     display: none;
     position: fixed;
     top: 120px;
@@ -10,14 +10,14 @@ nav.sidebar {
         display: block;
         position: relative;
         border: 1px solid #344b87;
-        color: #344b87;
-        background: #fff;
-        height: 32px;
+        color: #344b87; 
+        background: #fff;  
+        height: 32px;  
         line-height: 32px;
         padding-left: 40px;
         margin-bottom: 15px;
         transition: all .5s;
-        span {
+        span { 
             position: absolute;
             width: 36px;
             height: 36px;
@@ -56,14 +56,14 @@ nav.sidebar {
     aside,
     section {
         box-sizing: border-box;
-    } 
+    }
     .wrap {
         padding: 115px 0;
         position: relative;
         >div {
             width: 75%;
             a.text {
-                width: 70%;
+                width: 85%;
                 display: block;
                 img {
                     width: 100%;
@@ -73,7 +73,7 @@ nav.sidebar {
                 position: absolute;
                 bottom: 0;
                 right: 22%;
-                width: 38.5%; // animation: move cubic-bezier(0.4, 0, 0.2, 1) 1.6s forwards;
+                width: 35%; // animation: move cubic-bezier(0.4, 0, 0.2, 1) 1.6s forwards;
             }
             .countdown {
                 display: none;
@@ -195,7 +195,6 @@ nav.sidebar {
                 background-image: -ms-linear-gradient( -180deg, rgb(250, 187, 18) 0%, rgb(253, 217, 33) 100%);
                 margin-top: 15px;
                 border: none;
-                
             }
         }
         section {
@@ -267,8 +266,12 @@ nav.sidebar {
                 width: 100%;
                 position: relative;
                 padding: 30px 20px 80px;
+                a.text {
+                    width: 100%;
+                }
                 .centerimg {
                     right: 0;
+                    width: 45%;
                 }
             }
         }
@@ -332,7 +335,7 @@ nav.sidebar {
                     width: 100%;
                 }
                 .centerimg {
-                    width: 30%;
+                    width: 40%;
                 }
                 .countdown {
                     left: 10px;
@@ -343,93 +346,112 @@ nav.sidebar {
 }
 
 //banner end
-//tables start
-.percentage,
-.different, 
-.compare {
-    padding: 70px 20px;
-    text-align: center;    
-    background-color: #f5f6f9;
-    >p {
-        font-size: 18px;
-        color: #666;
+
+//review start
+.review{
+  padding: 70px 20px 0;  
+  background:#f7f7f7  url("../images/review.jpg") no-repeat bottom center;
+  section{
+    height: 400px;
+    box-sizing: border-box;
+    padding-top: 50px;
+    .context{
+      &:first-of-type{
+        margin-bottom: 50px;
+      }
+      h3{
+        color:#344b87;
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      p{
+        width: 50%;
+        color:#666;
+        line-height: 30px;
+        font-size: 16px; 
+        span{
+          margin-right: 40px;
+          b{
+            font-size: 40px;
+            font-weight: 400;
+          }
+          &:last-of-type{
+            margin-right: 0;
+          }
+        }
+      }
     }
-    .wrap {
-        overflow-x: auto;
-        .table {
-            width: 100%;
-            margin: 50px 0;
-            min-width: 960px;
+  }
+
+}
+//review end
+
+//prepare start
+.prepare {
+    padding: 70px 20px;
+    background-color: #fff;
+    text-align: center;
+    ul {
+        overflow: hidden;
+        margin: 30px 0;
+        li {
+            box-sizing: border-box;
+            padding: 0 1.5%;
+            float: left;
+            width: 33.33%;
             img {
                 max-width: 100%;
             }
-        }
-    }
-    p.hint{
-      font-size: 12px;
-      color:#999;
-      display: none;
-      text-align: right;
-      b{
-        color:red;
-      }
-    }
-    @media(max-width:960px) {
-        >p {
-            font-size: 16px;
-        }
-        p.hint{
-          display: block;
+            h3 {
+                font-size: 20px;
+                color: #213768;
+                font-weight: 600;
+            }
+            p {
+                font-size: 16px;
+                color: #666;
+                line-height: 30px;
+                text-align: justify;
+            }
         }
     }
     @media(max-width:768px) {
         padding: 50px 20px;
     }
     @media(max-width:640px) {
-        >p {
-            font-size: 14px
+        ul {
+            li {
+                width: 100%;
+                margin-top: 10px;
+                padding: 0;
+                img {
+                    float: left;
+                    width: 95px;
+                }
+                div {
+                    margin-left: 100px;
+                    h3 {
+                        text-align: left;
+                        font-size: 18px;
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: 22px;
+                    }
+                }
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
         }
     }
     @media(max-width:480px) {
         padding: 20px;
-        >p {
-            font-size: 12px;
-        }
-        .wrap{
-          .table{
-            margin: 20px 0;
-          }
+        ul {
+            margin: 20px 0
         }
     }
 }
 
-.different{
-  padding: 50px 20px;
-  h2{
-    span{
-      color:#fff;
-    } 
-  }
-  p.hint{
-    color:#fff;
-  }
-  a.survey{
-    color:#985b00;
-    transition: all .5s;
-    background-image: -moz-linear-gradient( -180deg, rgb(250,187,18) 0%, rgb(253,217,33) 100%);
-    background-image: -webkit-linear-gradient( -180deg, rgb(250,187,18) 0%, rgb(253,217,33) 100%);
-    background-image: -ms-linear-gradient( -180deg, rgb(250,187,18) 0%, rgb(253,217,33) 100%);
-    &:hover{
-        background-image: -moz-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);
-        background-image: -webkit-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);
-        background-image: -ms-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);    
-    }
-  }  
-  background: url("../images/testcontent-bg2.jpg") no-repeat center center;
-}
-.compare{
-  a.survey{
-    width: 210px;
-  }
-}
-//tables end
+//prepare end
