@@ -56,7 +56,7 @@ nav.sidebar {
     aside,
     section {
         box-sizing: border-box;
-    }
+    } 
     .wrap {
         padding: 115px 0;
         position: relative;
@@ -78,8 +78,8 @@ nav.sidebar {
             .countdown {
                 display: none;
                 position: absolute;
-                width: 58%;
-                max-width: 190px;
+                width: 60%;
+                max-width: 195px;
                 height: 50px;
                 padding: 5px;
                 border: 1px solid #ccc;
@@ -90,7 +90,7 @@ nav.sidebar {
                 p {
                     float: left;
                     line-height: 20px;
-                    width: 108px;
+                    width: 110px;
                     text-align: right;
                 }
                 div {
@@ -195,6 +195,7 @@ nav.sidebar {
                 background-image: -ms-linear-gradient( -180deg, rgb(250, 187, 18) 0%, rgb(253, 217, 33) 100%);
                 margin-top: 15px;
                 border: none;
+                
             }
         }
         section {
@@ -414,9 +415,15 @@ nav.sidebar {
   }
   a.survey{
     color:#985b00;
+    transition: all .5s;
     background-image: -moz-linear-gradient( -180deg, rgb(250,187,18) 0%, rgb(253,217,33) 100%);
     background-image: -webkit-linear-gradient( -180deg, rgb(250,187,18) 0%, rgb(253,217,33) 100%);
     background-image: -ms-linear-gradient( -180deg, rgb(250,187,18) 0%, rgb(253,217,33) 100%);
+    &:hover{
+        background-image: -moz-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);
+        background-image: -webkit-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);
+        background-image: -ms-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);    
+    }
   }  
   background: url("../images/testcontent-bg2.jpg") no-repeat center center;
 }

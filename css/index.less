@@ -79,11 +79,11 @@ nav.sidebar{
             .countdown {
                 display: none;
                 position: absolute;
-                width: 58%;
-                max-width: 190px;
+                width: 60%;
+                max-width: 195px;
                 height: 50px;
-                padding: 5px;
-                border: 1px solid #ccc;
+                padding: 5px; 
+                border: 1px solid #ccc; 
                 left: 20px;
                 bottom: 10px;
                 color: #fff;
@@ -91,7 +91,7 @@ nav.sidebar{
                 p {
                     float: left;
                     line-height: 20px;
-                    width: 108px;
+                    width: 110px;
                     text-align: right;
                 }
                 div {
@@ -342,7 +342,7 @@ nav.sidebar{
     }
 }
 //banner end
-
+ 
 //intro start
 .intro {
     padding: 70px 20px;
@@ -414,7 +414,7 @@ nav.sidebar{
             }
         }
     }
-}
+} 
 //intro end
 
 //condition start
@@ -721,7 +721,7 @@ nav.sidebar{
         }
     }
 }
-
+   
 //prepare end
 //testtime start
 .testtime {
@@ -791,11 +791,11 @@ nav.sidebar{
             margin-top: 5px
         }
     }
-}
-
+} 
+   
 //testtime end
-//grade start
-.grade {
+//grade start 
+.grade { 
     background: url("../images/index-grade.jpg") no-repeat center center;
     background-size: cover;
     padding: 70px 20px;
@@ -803,7 +803,7 @@ nav.sidebar{
         span {
             color: #fff;
         }
-    }
+    }   
     section {
         background-color: #fff;
         max-width: 980px;
@@ -833,9 +833,14 @@ nav.sidebar{
                 background-image: -webkit-linear-gradient( 0deg, rgb(250, 218, 43) 0%, rgb(231, 179, 21) 100%);
                 background-image: -ms-linear-gradient( 0deg, rgb(250, 218, 43) 0%, rgb(231, 179, 21) 100%);
                 border:none;
+                &:hover{
+                    background-image: -moz-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);
+                    background-image: -webkit-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);
+                    background-image: -ms-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);    
+                }
             }
         }
-    }
+    }   
     @media(max-width:768px) {
         padding: 50px 20px;
         section {
@@ -844,7 +849,7 @@ nav.sidebar{
             }
             div {
                 margin-left: 200px;
-                padding: 20px;
+                padding: 30px 20px 0;
                 h3 {
                     font-size: 20px;
                 }

@@ -1,100 +1,100 @@
 //public
 .wrap {
-  max-width: 1200px;
+    max-width: 1200px;
 }
 
 .spill(@n) {
-  overflow: hidden;
-  display: -webkit-box;
-  word-break: break-all;
-  -webkit-line-clamp: @n;
-  -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: @n;
+    -webkit-box-orient: vertical;
 }
 
 h1 {
-  position: fixed;
-  top: -6666px;
+    position: fixed;
+    top: -6666px;
 }
 
 h2 {
-  text-align: center;
-  span {
-      color: #333;
-      font-size: 36px;
-      position: relative;
-      &:after,
-      &:before {
-          position: absolute;
-          content: '';
-          width: 50px;
-          height: 12px;
-          top: 50%;
-          transform: translateY(-50%)
-      }
-      &:before {
-          background-image: url("../images/title-r.png");
-          left: -60px;
-      }
-      &:after {
-          background-image: url("../images/title-l.png");
-          right: -60px;
-      }
-  }
-  @media(max-width:768px) {
-      span {
-          font-size: 24px;
-      }
-  }
-  @media(max-width:480px) {
-      span {
-          font-size: 18px;
-      }
-  }
+    text-align: center;
+    span {
+        color: #333;
+        font-size: 36px;
+        position: relative;
+        &:after,
+        &:before {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 12px;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+        &:before {
+            background-image: url("../images/title-r.png");
+            left: -80px;
+        }
+        &:after {
+            background-image: url("../images/title-l.png");
+            right: -80px;
+        }
+    }
+    @media(max-width:768px) {
+        span {
+            font-size: 24px;
+        }
+    }
+    @media(max-width:480px) {
+        span {
+            font-size: 18px;
+        }
+    }
 }
 
 input[type="text"],
 select,
 option {
-  background: transparent;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
 }
 
 select::-ms-expand {
-  display: none;
+    display: none;
 }
 
 select {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
 
 a.survey {
-  display: inline-block;
-  width: 196px;
-  height: 44px;
-  line-height: 44px;
-  text-align: center;
-  background-color: #243a6d;
-  border: 1px solid #243a6d;
-  font-size: 18px;
-  color: #fff;
-  transition: all .5s;
-  @media(max-width: 480px) {
-      width: 150px;
-      height: 36px;
-      line-height: 36px;
-      font-size: 14px;
-  }
-  &:hover{
-      background-color: #dde2f0;
-      color:#243a6d;
-  }
+    display: inline-block;
+    width: 196px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background-image: -moz-linear-gradient( 0deg, rgb(52,75,135) 0%, rgb(33,55,104) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(52,75,135) 0%, rgb(33,55,104) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(52,75,135) 0%, rgb(33,55,104) 100%);    
+    font-size: 18px;
+    color: #fff;
+    transition: all .5s;
+    &:hover {
+        background-image: -moz-linear-gradient( 0deg, #2c4078 0%, #1a2d56 100%);
+        background-image: -webkit-linear-gradient( 0deg, #2c4078 0%, #1a2d56 100%);
+        background-image: -ms-linear-gradient( 0deg, #2c4078 0%, #1a2d56 100%); 
+    }
+    @media(max-width: 480px) {
+        width: 150px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+    }
 }
-
-
 
 //recommend start
 .recommend {
@@ -108,6 +108,10 @@ a.survey {
             margin: 0 5% 10px 0;
             background-color: #f5f6f9;
             position: relative;
+            transition: all .5s;
+            &:hover {
+                box-shadow: 0 3px 15px 2px #ddd;
+            }
             img {
                 width: 100%;
             }
@@ -123,7 +127,7 @@ a.survey {
                     font-size: 16px;
                     color: #999;
                     text-align: justify;
-                    .spill(4);
+                    .spill(3);
                 }
             }
             &:last-of-type {
@@ -188,7 +192,7 @@ a.survey {
                     }
                     p {
                         font-size: 12px;
-                        .spill(5);
+                        .spill(3);
                     }
                 }
             }
