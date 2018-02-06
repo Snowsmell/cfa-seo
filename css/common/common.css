@@ -63,8 +63,10 @@ a.survey {
   line-height: 44px;
   text-align: center;
   background-color: #243a6d;
+  border: 1px solid #243a6d;
   font-size: 18px;
   color: #fff;
+  transition: all .5s;
 }
 @media (max-width: 480px) {
   a.survey {
@@ -72,5 +74,113 @@ a.survey {
     height: 36px;
     line-height: 36px;
     font-size: 14px;
+  }
+}
+a.survey:hover {
+  background-color: #dde2f0;
+  color: #243a6d;
+}
+.recommend {
+  padding: 70px 20px;
+}
+.recommend ul {
+  overflow: hidden;
+  margin-top: 30px;
+}
+.recommend ul li {
+  float: left;
+  width: 30%;
+  margin: 0 5% 10px 0;
+  background-color: #f5f6f9;
+  position: relative;
+}
+.recommend ul li img {
+  width: 100%;
+}
+.recommend ul li div {
+  padding: 20px;
+}
+.recommend ul li div h3 {
+  color: #020202;
+  font-size: 18px;
+  margin: 15px 0;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.recommend ul li div p {
+  font-size: 16px;
+  color: #999;
+  text-align: justify;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.recommend ul li:last-of-type {
+  margin-right: 0;
+}
+.recommend ul li a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 768px) {
+  .recommend {
+    padding: 50px 20px;
+  }
+  .recommend ul li div {
+    padding: 15px;
+  }
+  .recommend ul li div h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  .recommend ul li div p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 640px) {
+  .recommend ul li {
+    width: 48%;
+    margin: 0 4% 10px 0;
+  }
+  .recommend ul li:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  .recommend ul li div {
+    padding: 15px;
+    height: 128px;
+  }
+  .recommend ul li div h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  .recommend ul li div p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .recommend {
+    padding: 20px;
+  }
+  .recommend ul {
+    margin-top: 20px;
+  }
+  .recommend ul li div h3 {
+    font-size: 14px;
+  }
+  .recommend ul li div p {
+    font-size: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
   }
 }

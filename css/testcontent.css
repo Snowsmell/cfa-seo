@@ -63,10 +63,8 @@ a.survey {
   line-height: 44px;
   text-align: center;
   background-color: #243a6d;
-  border: 1px solid #243a6d;
   font-size: 18px;
   color: #fff;
-  transition: all .5s;
 }
 @media (max-width: 480px) {
   a.survey {
@@ -75,10 +73,6 @@ a.survey {
     line-height: 36px;
     font-size: 14px;
   }
-}
-a.survey:hover {
-  background-color: #dde2f0;
-  color: #243a6d;
 }
 .recommend {
   padding: 70px 20px;
@@ -250,7 +244,7 @@ nav.sidebar a.current span {
   width: 75%;
 }
 .banner .wrap > div a.text {
-  width: 58%;
+  width: 70%;
   display: block;
 }
 .banner .wrap > div a.text img {
@@ -509,532 +503,108 @@ nav.sidebar a.current span {
     left: 10px;
   }
 }
-.intro {
+.percentage,
+.different,
+.compare {
   padding: 70px 20px;
-}
-.intro section {
-  margin-top: 50px;
-  background: #f8fcff url("../images/index-intro.jpg") no-repeat bottom right;
-  overflow: hidden;
-  border: 1px solid #b7c1db;
-}
-.intro section .imgbox {
   text-align: center;
-  float: left;
-  width: 350px;
-  padding: 50px 0;
-}
-.intro section .imgbox img {
-  max-width: 100%;
-}
-.intro section .content {
-  margin-left: 350px;
-  padding: 60px 60px 60px 0;
-}
-.intro section .content p {
-  color: #666;
-  font-size: 16px;
-  line-height: 36px;
-  margin-bottom: 30px;
-  text-align: justify;
-}
-.intro section .content p b {
-  color: #213768;
-}
-@media (max-width: 768px) {
-  .intro {
-    padding: 50px 20px;
-  }
-  .intro section {
-    margin-top: 30px;
-  }
-  .intro section .imgbox {
-    width: 35%;
-  }
-  .intro section .imgbox img {
-    width: 80%;
-  }
-  .intro section .content {
-    margin-left: 35%;
-    padding: 50px 30px 50px 0;
-  }
-  .intro section .content p {
-    font-size: 14px;
-    line-height: 28px;
-  }
-}
-@media (max-width: 480px) {
-  .intro {
-    padding: 20px;
-  }
-  .intro section {
-    margin-top: 20px;
-  }
-  .intro section .content {
-    padding: 30px 10px 30px 0;
-  }
-  .intro section .content p {
-    font-size: 12px;
-    line-height: 24px;
-  }
-  .intro section .content a.survey {
-    width: 150px;
-    font-size: 14px;
-    height: 36px;
-    line-height: 36px;
-  }
-}
-.condition {
   background-color: #f5f6f9;
-  padding: 70px 20px;
-  text-align: center;
 }
-.condition section {
+.percentage > p,
+.different > p,
+.compare > p {
+  font-size: 18px;
+  color: #666;
+}
+.percentage .wrap,
+.different .wrap,
+.compare .wrap {
+  overflow-x: auto;
+}
+.percentage .wrap .table,
+.different .wrap .table,
+.compare .wrap .table {
+  width: 100%;
   margin: 50px 0;
-  background-color: #fff;
-  border: 1px solid #b7c1db;
-  padding: 30px;
-  overflow: hidden;
+  min-width: 960px;
 }
-.condition section > div {
-  float: left;
-  box-sizing: border-box;
-}
-.condition section > div:first-of-type {
-  width: 65%;
-  border-right: 1px solid #b7c1db;
-  padding-right: 60px;
-}
-.condition section > div:first-of-type p {
-  padding-left: 45px;
-}
-.condition section > div:first-of-type p:before {
-  content: '';
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #c7cddb;
-  left: 35px;
-  top: 15px;
-}
-.condition section > div:last-of-type {
-  width: 35%;
-  padding-left: 60px;
-}
-.condition section > div p {
-  padding-left: 40px;
-  position: relative;
-  font-size: 16px;
-  color: #666;
-  line-height: 36px;
-  text-align: justify;
-}
-.condition section > div p span {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  color: #fff;
-  background-color: #213768;
-  text-align: center;
-  line-height: 25px;
-  left: 0;
-  top: 5px;
-}
-@media (max-width: 768px) {
-  .condition {
-    padding: 50px 20px;
-  }
-  .condition section {
-    padding: 20px;
-  }
-  .condition section > div:first-of-type {
-    padding-right: 30px;
-  }
-  .condition section > div:first-of-type p:before {
-    top: 10px;
-  }
-  .condition section > div:last-of-type {
-    padding-left: 30px;
-  }
-  .condition section > div p {
-    font-size: 14px;
-    line-height: 28px;
-  }
-  .condition section > div p span {
-    top: 2px;
-  }
-}
-@media (max-width: 640px) {
-  .condition {
-    padding: 50px 20px;
-  }
-  .condition section {
-    padding: 20px;
-  }
-  .condition section > div:first-of-type {
-    width: 100%;
-    padding-right: 0;
-    border-right: none;
-  }
-  .condition section > div:last-of-type {
-    width: 100%;
-    padding-left: 0;
-  }
-  .condition section > div p {
-    font-size: 14px;
-    line-height: 28px;
-  }
-}
-@media (max-width: 480px) {
-  .condition {
-    padding: 20px;
-  }
-  .condition section {
-    margin: 20px 0;
-  }
-}
-.cost {
-  padding: 70px 20px;
-  background: url("../images/index-cost.jpg") no-repeat center center;
-  background-size: cover;
-  text-align: center;
-}
-.cost > p {
-  font-size: 18px;
-  color: #666;
-}
-.cost dl {
-  overflow: hidden;
-  margin: 40px 0;
-  text-align: justify;
-}
-.cost dl dt {
-  border-left: 4px solid #666;
-  color: #666;
-  font-weight: 600;
-  padding-left: 15px;
-  font-size: 18px;
-}
-.cost dl dd {
-  box-sizing: border-box;
-  float: left;
-  width: 32%;
-  margin: 10px 2% 10px 0;
-  height: 183px;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  padding: 20px 30px;
-}
-.cost dl dd h3 {
-  font-size: 22px;
-  color: #333;
-  font-weight: 600;
-  position: relative;
-  margin-bottom: 20px;
-}
-.cost dl dd h3:after {
-  position: absolute;
-  content: '';
-  width: 7%;
-  height: 2px;
-  background-color: #344b87;
-  bottom: -10px;
-  left: 0;
-}
-.cost dl dd p {
-  font-size: 16px;
-  color: #666;
-  line-height: 28px;
-}
-.cost dl dd:nth-of-type(1) {
-  background-image: url("../images/index-cost1.jpg");
-}
-.cost dl dd:nth-of-type(2) {
-  background-image: url("../images/index-cost2.jpg");
-}
-.cost dl dd:nth-of-type(3) {
-  margin-right: 0;
-  background-image: url("../images/index-cost3.jpg");
-}
-@media (max-width: 960px) {
-  .cost > p {
-    font-size: 16px;
-  }
-  .cost dl dt {
-    font-size: 16px;
-  }
-  .cost dl dd {
-    height: 150px;
-    padding: 10px 15px;
-  }
-  .cost dl dd h3 {
-    font-size: 18px;
-  }
-  .cost dl dd p {
-    font-size: 14px;
-    line-height: 24px;
-  }
-}
-@media (max-width: 768px) {
-  .cost {
-    padding: 50px 20px;
-  }
-  .cost dl dd p {
-    font-size: 12px;
-    line-height: 20px;
-  }
-}
-@media (max-width: 640px) {
-  .cost > p {
-    font-size: 14px;
-  }
-  .cost dl dt {
-    font-size: 14px;
-  }
-  .cost dl dd {
-    width: 100%;
-    float: none;
-    margin: 10px 0 0;
-  }
-  .cost dl dd p {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-@media (max-width: 480px) {
-  .cost {
-    padding: 20px;
-  }
-  .cost > p {
-    font-size: 12px;
-  }
-  .cost dl {
-    margin: 20px 0;
-  }
-}
-.prepare {
-  padding: 70px 20px;
-  background: url("../images/index-prepare.jpg");
-  text-align: center;
-}
-.prepare ul {
-  overflow: hidden;
-  margin: 30px 0;
-}
-.prepare ul li {
-  box-sizing: border-box;
-  padding: 0 3%;
-  float: left;
-  width: 33.33%;
-}
-.prepare ul li img {
+.percentage .wrap .table img,
+.different .wrap .table img,
+.compare .wrap .table img {
   max-width: 100%;
 }
-.prepare ul li h3 {
-  font-size: 20px;
-  color: #213768;
-  font-weight: 600;
-}
-.prepare ul li p {
-  font-size: 16px;
-  color: #666;
-  line-height: 30px;
-  text-align: justify;
-}
-@media (max-width: 768px) {
-  .prepare {
-    padding: 50px 20px;
-  }
-}
-@media (max-width: 640px) {
-  .prepare ul li {
-    width: 100%;
-    margin-top: 10px;
-    padding: 0;
-  }
-  .prepare ul li img {
-    float: left;
-    width: 95px;
-  }
-  .prepare ul li div {
-    margin-left: 100px;
-  }
-  .prepare ul li div h3 {
-    text-align: left;
-    font-size: 18px;
-  }
-  .prepare ul li div p {
-    font-size: 14px;
-    line-height: 22px;
-  }
-  .prepare ul li:first-of-type {
-    margin-top: 0;
-  }
-}
-@media (max-width: 480px) {
-  .prepare {
-    padding: 20px;
-  }
-  .prepare ul {
-    margin: 20px 0;
-  }
-}
-.testtime {
-  padding: 70px 20px;
-}
-.testtime section {
-  overflow: hidden;
-  margin-top: 30px;
-}
-.testtime section > div {
-  box-sizing: border-box;
-  float: left;
-  width: 50%;
-}
-.testtime section > div:first-of-type h3 {
-  font-size: 18px;
-  margin: 15px 0;
-}
-.testtime section > div:first-of-type p {
-  font-size: 14px;
+.percentage p.hint,
+.different p.hint,
+.compare p.hint {
+  font-size: 12px;
   color: #999;
+  display: none;
+  text-align: right;
 }
-.testtime section > div:first-of-type p span {
-  margin: 0 20px 20px 0;
-  display: inline-block;
-  padding: 5px 15px;
-  background-color: #e5ecf4;
-  color: #213768;
-}
-.testtime section > div:first-of-type a.survey {
-  margin-top: 30px;
-}
-.testtime section > div:last-of-type {
-  text-align: center;
-}
-.testtime section > div:last-of-type img {
-  max-width: 100%;
+.percentage p.hint b,
+.different p.hint b,
+.compare p.hint b {
+  color: red;
 }
 @media (max-width: 960px) {
-  .testtime section > div {
-    float: none;
-    width: 100%;
+  .percentage > p,
+  .different > p,
+  .compare > p {
+    font-size: 16px;
+  }
+  .percentage p.hint,
+  .different p.hint,
+  .compare p.hint {
+    display: block;
   }
 }
 @media (max-width: 768px) {
-  .testtime {
+  .percentage,
+  .different,
+  .compare {
     padding: 50px 20px;
   }
-  .testtime section > div:first-of-type h3 {
-    font-size: 16px;
-  }
-  .testtime section > div:first-of-type p span {
-    margin: 0 10px 10px 0;
-    padding: 3px 12px;
+}
+@media (max-width: 640px) {
+  .percentage > p,
+  .different > p,
+  .compare > p {
+    font-size: 14px;
   }
 }
 @media (max-width: 480px) {
-  .testtime {
+  .percentage,
+  .different,
+  .compare {
     padding: 20px;
   }
-  .testtime section {
-    margin-top: 5px;
+  .percentage > p,
+  .different > p,
+  .compare > p {
+    font-size: 12px;
+  }
+  .percentage .wrap .table,
+  .different .wrap .table,
+  .compare .wrap .table {
+    margin: 20px 0;
   }
 }
-.grade {
-  background: url("../images/index-grade.jpg") no-repeat center center;
-  background-size: cover;
-  padding: 70px 20px;
+.different {
+  padding: 50px 20px;
+  background: url("../images/testcontent-bg2.jpg") no-repeat center center;
 }
-.grade h2 span {
+.different h2 span {
   color: #fff;
 }
-.grade section {
-  background-color: #fff;
-  max-width: 980px;
-  margin: 40px auto 0;
-  border-radius: 5px;
-  overflow: hidden;
+.different p.hint {
+  color: #fff;
 }
-.grade section img {
-  float: left;
-  width: 300px;
-}
-.grade section div {
-  margin-left: 300px;
-  padding: 60px;
-}
-.grade section div h3 {
-  color: #213768;
-  font-size: 24px;
-  font-weight: 600;
-}
-.grade section div p {
-  margin: 30px 0;
-  font-size: 18px;
-}
-.grade section div a.survey {
-  margin-top: 30px;
+.different a.survey {
   color: #985b00;
-  background-image: -moz-linear-gradient(0deg, #fada2b 0%, #e7b315 100%);
-  background-image: -webkit-linear-gradient(0deg, #fada2b 0%, #e7b315 100%);
-  background-image: -ms-linear-gradient(0deg, #fada2b 0%, #e7b315 100%);
-  border: none;
+  background-image: -moz-linear-gradient(-180deg, #fabb12 0%, #fdd921 100%);
+  background-image: -webkit-linear-gradient(-180deg, #fabb12 0%, #fdd921 100%);
+  background-image: -ms-linear-gradient(-180deg, #fabb12 0%, #fdd921 100%);
 }
-@media (max-width: 768px) {
-  .grade {
-    padding: 50px 20px;
-  }
-  .grade section img {
-    width: 200px;
-  }
-  .grade section div {
-    margin-left: 200px;
-    padding: 20px;
-  }
-  .grade section div h3 {
-    font-size: 20px;
-  }
-  .grade section div p {
-    margin: 10px 0;
-    font-size: 16px;
-  }
-}
-@media (max-width: 480px) {
-  .grade {
-    padding: 20px;
-  }
-  .grade section {
-    margin-top: 20px;
-  }
-  .grade section img {
-    width: 120px;
-  }
-  .grade section div {
-    margin-left: 120px;
-    padding: 10px;
-  }
-  .grade section div h3 {
-    font-size: 16px;
-  }
-  .grade section div p {
-    font-size: 12px;
-    margin: 5px 0;
-  }
-  .grade section div a.survey {
-    margin-top: 0;
-  }
-}
-@keyframes move {
-  0% {
-    opacity: 0;
-    bottom: -200px;
-  }
-  100% {
-    opacity: 1;
-    bottom: 0;
-  }
+.compare a.survey {
+  width: 210px;
 }
