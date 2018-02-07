@@ -362,11 +362,20 @@ nav.sidebar {
         margin: 40px 0;
         text-align: justify;
         dt {
-            border-left: 4px solid #666;
+            position: relative;            
             color: #666;
             font-weight: 600;
             padding-left: 15px;
             font-size: 16px;
+            &:before{
+                content:"";
+                position: absolute;
+                height: 60%;
+                width: 4px;
+                left: 0;
+                top:20%;
+                background-color: #666;
+            }
         }
         dd {
             box-sizing: border-box;
@@ -532,6 +541,11 @@ nav.sidebar {
             background-image: -moz-linear-gradient( -180deg, rgb(250, 187, 18) 0%, rgb(253, 217, 33) 100%);
             background-image: -webkit-linear-gradient( -180deg, rgb(250, 187, 18) 0%, rgb(253, 217, 33) 100%);
             background-image: -ms-linear-gradient( -180deg, rgb(250, 187, 18) 0%, rgb(253, 217, 33) 100%);
+            &:hover{
+                background-image: -moz-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);
+                background-image: -webkit-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);
+                background-image: -ms-linear-gradient( 0deg, #eac508  0%, #eaac05 100%);   
+            }
         }
     }
     @media(max-width:768px){
@@ -605,7 +619,7 @@ nav.sidebar {
                 transition: all .5s;
                 height: 36px;
                 line-height: 36px;
-                margin-top:10px;
+                margin-top:20px;
                 padding-left: 20px;
                 box-sizing: border-box;
                 &:first-of-type{
@@ -718,5 +732,5 @@ nav.sidebar {
           }
       }
   }
-}
+} 
 //scholarship end

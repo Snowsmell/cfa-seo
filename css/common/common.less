@@ -2,7 +2,17 @@
 .wrap {
     max-width: 1200px;
 }
-
+/* 清除浮动 */
+.cf(){
+	// IE7-
+	*zoom: 1;
+	// others
+	&:after {
+		content: " ";
+		clear: both;
+		display: table;
+  }
+}
 .spill(@n) {
     overflow: hidden;
     display: -webkit-box;
@@ -100,7 +110,7 @@ a.survey {
 .recommend {
     padding: 70px 20px;
     ul {
-        overflow: hidden;
+        .cf();
         margin-top: 30px;
         li {
             float: left;
@@ -110,7 +120,7 @@ a.survey {
             position: relative;
             transition: all .5s;
             &:hover {
-                box-shadow: 0 3px 15px 2px #ddd;
+                box-shadow:0 3px 8px 2px #ddd
             }
             img {
                 width: 100%;

@@ -98,7 +98,7 @@ a.survey:hover {
   transition: all .5s;
 }
 .recommend ul li:hover {
-  box-shadow: 0 3px 15px 2px #ddd;
+  box-shadow: 0 3px 8px 2px #ddd;
 }
 .recommend ul li img {
   width: 100%;
@@ -109,7 +109,7 @@ a.survey:hover {
 .recommend ul li div h3 {
   color: #020202;
   font-size: 18px;
-  margin: 15px 0;
+  margin: 5px 0 15px;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;

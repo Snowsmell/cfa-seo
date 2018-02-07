@@ -1,6 +1,7 @@
 .wrap {
   max-width: 1200px;
 }
+/* 清除浮动 */
 h1 {
   position: fixed;
   top: -6666px;
@@ -86,8 +87,13 @@ a.survey:hover {
   padding: 70px 20px;
 }
 .recommend ul {
-  overflow: hidden;
+  *zoom: 1;
   margin-top: 30px;
+}
+.recommend ul:after {
+  content: " ";
+  clear: both;
+  display: table;
 }
 .recommend ul li {
   float: left;
@@ -98,7 +104,7 @@ a.survey:hover {
   transition: all .5s;
 }
 .recommend ul li:hover {
-  box-shadow: 0 3px 15px 2px #ddd;
+  box-shadow: 0 3px 8px 2px #ddd;
 }
 .recommend ul li img {
   width: 100%;
@@ -109,7 +115,7 @@ a.survey:hover {
 .recommend ul li div h3 {
   color: #020202;
   font-size: 18px;
-  margin: 15px 0;
+  margin: 5px 0 15px;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;
@@ -731,11 +737,20 @@ nav.sidebar a.current span {
   text-align: justify;
 }
 .cost dl dt {
-  border-left: 4px solid #666;
+  position: relative;
   color: #666;
   font-weight: 600;
   padding-left: 15px;
   font-size: 18px;
+}
+.cost dl dt:before {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 4px;
+  left: 0;
+  top: 20%;
+  background-color: #666;
 }
 .cost dl dd {
   box-sizing: border-box;
@@ -747,6 +762,7 @@ nav.sidebar a.current span {
   background-repeat: no-repeat;
   background-position: bottom right;
   padding: 20px 30px;
+  transition: all .5s;
 }
 .cost dl dd h3 {
   font-size: 22px;
@@ -763,6 +779,9 @@ nav.sidebar a.current span {
   background-color: #344b87;
   bottom: -10px;
   left: 0;
+}
+.cost dl dd:hover {
+  box-shadow: 0 3px 15px 2px #ddd;
 }
 .cost dl dd p {
   font-size: 16px;

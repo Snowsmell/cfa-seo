@@ -35,7 +35,7 @@ nav.sidebar{
             i.iconfont{
                 font-weight: 600
             }
-        }
+        } 
         &:hover,
         &.current{
             background-color: #344b87;
@@ -519,7 +519,7 @@ nav.sidebar{
                 }
             }
         }
-    }
+    } 
     @media(max-width:480px) {
         padding: 20px;
         section {
@@ -544,11 +544,20 @@ nav.sidebar{
         margin: 40px 0;
         text-align: justify;
         dt {
-            border-left: 4px solid #666;
+            position: relative;
             color: #666;
             font-weight: 600;
             padding-left: 15px;
             font-size: 18px;
+            &:before{
+                content:"";
+                position: absolute;
+                height: 60%;
+                width: 4px;
+                left: 0;
+                top:20%;
+                background-color: #666;
+            }
         }
         dd {
             box-sizing: border-box;
@@ -560,6 +569,7 @@ nav.sidebar{
             background-repeat: no-repeat;
             background-position: bottom right;
             padding: 20px 30px;
+            transition: all .5s;
             h3 {
                 font-size: 22px;
                 color: #333;
@@ -575,6 +585,9 @@ nav.sidebar{
                     bottom: -10px;
                     left: 0;
                 }
+            }
+            &:hover{
+                box-shadow: 0 3px 15px 2px #ddd;
             }
             p {
                 font-size: 16px;

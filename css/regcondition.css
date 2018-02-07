@@ -1,6 +1,7 @@
 .wrap {
   max-width: 1200px;
 }
+/* 清除浮动 */
 h1 {
   position: fixed;
   top: -6666px;
@@ -86,8 +87,13 @@ a.survey:hover {
   padding: 70px 20px;
 }
 .recommend ul {
-  overflow: hidden;
+  *zoom: 1;
   margin-top: 30px;
+}
+.recommend ul:after {
+  content: " ";
+  clear: both;
+  display: table;
 }
 .recommend ul li {
   float: left;
@@ -98,7 +104,7 @@ a.survey:hover {
   transition: all .5s;
 }
 .recommend ul li:hover {
-  box-shadow: 0 3px 15px 2px #ddd;
+  box-shadow: 0 3px 8px 2px #ddd;
 }
 .recommend ul li img {
   width: 100%;
@@ -109,7 +115,7 @@ a.survey:hover {
 .recommend ul li div h3 {
   color: #020202;
   font-size: 18px;
-  margin: 15px 0;
+  margin: 5px 0 15px;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;
@@ -768,7 +774,7 @@ nav.sidebar a.current span {
 }
 .questions .wrap .imgbox {
   text-align: center;
-  margin: 50px 0;
+  padding: 50px 0;
   overflow-x: auto;
   border-radius: 10px;
 }
@@ -798,7 +804,7 @@ nav.sidebar a.current span {
     padding: 50px 20px;
   }
   .questions .wrap .imgbox {
-    margin: 30px 0;
+    padding: 30px 0;
   }
 }
 @media (max-width: 480px) {
@@ -806,7 +812,7 @@ nav.sidebar a.current span {
     padding: 20px;
   }
   .questions .wrap .imgbox {
-    margin: 20px 0;
+    padding: 20px 0;
   }
   .questions .wrap .survey {
     overflow: hidden;
