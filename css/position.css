@@ -175,7 +175,7 @@ a.survey:hover {
     margin: 0;
   }
   .recommend ul li div {
-    padding: 15px;
+    padding: 15px 10px;
     height: 128px;
   }
   .recommend ul li div h3 {
@@ -629,18 +629,37 @@ nav.sidebar a.current span {
   float: left;
   width: 50%;
   height: 320px;
+  position: relative;
+  font-size: 16px;
+  line-height: 32px;
 }
 .questions ul li:nth-of-type(1) {
-  padding: 0 40px 40px 0;
+  padding: 0 45px 30px 0;
+}
+.questions ul li:nth-of-type(1) a.survey {
+  left: 30px;
+  bottom: 30px;
 }
 .questions ul li:nth-of-type(2) {
-  padding: 0 0 40px 40px;
+  padding: 0 0 30px 45px;
+}
+.questions ul li:nth-of-type(2) a.survey {
+  left: 75px;
+  bottom: 30px;
 }
 .questions ul li:nth-of-type(3) {
-  padding: 40px 40px 0 0;
+  padding: 30px 45px 0 0;
+}
+.questions ul li:nth-of-type(3) a.survey {
+  left: 30px;
+  bottom: 60px;
 }
 .questions ul li:nth-of-type(4) {
-  padding: 40px 0 0 40px;
+  padding: 30px 0 0 45px;
+}
+.questions ul li:nth-of-type(4) a.survey {
+  left: 75px;
+  bottom: 60px;
 }
 .questions ul li h3 {
   font-size: 20px;
@@ -649,4 +668,117 @@ nav.sidebar a.current span {
   padding-left: 30px;
   margin-bottom: 25px;
   background: url("../images/star.png") no-repeat center left;
+}
+.questions ul li dl {
+  padding-left: 30px;
+}
+.questions ul li dl dt {
+  color: #333;
+  font-weight: 600;
+}
+.questions ul li dl dd {
+  position: relative;
+  padding-left: 25px;
+}
+.questions ul li dl dd span {
+  position: absolute;
+  left: 0;
+}
+.questions ul li dl dd a {
+  color: #ea4a1f;
+}
+.questions ul li h4 {
+  color: #333;
+  font-weight: 600;
+}
+.questions ul li h4,
+.questions ul li > p {
+  padding-left: 30px;
+}
+.questions ul li a.survey {
+  position: absolute;
+}
+@media (max-width: 1200px) {
+  .questions ul li {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 960px) {
+  .questions ul li {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .questions ul li:nth-of-type(1) {
+    padding: 0 30px 30px 0;
+  }
+  .questions ul li:nth-of-type(2) {
+    padding: 0 0 30px 30px;
+  }
+  .questions ul li:nth-of-type(2) a.survey {
+    left: 60px;
+  }
+  .questions ul li:nth-of-type(3) {
+    padding: 30px 30px 0 0;
+  }
+  .questions ul li:nth-of-type(4) {
+    padding: 30px 0 0 30px;
+  }
+  .questions ul li:nth-of-type(4) a.survey {
+    left: 60px;
+  }
+  .questions ul li h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .questions ul li a.survey {
+    font-size: 16px;
+    line-height: 36px;
+    height: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .questions {
+    padding: 50px 20px;
+  }
+  .questions ul {
+    margin-top: 0px;
+  }
+  .questions ul:before,
+  .questions ul:after {
+    display: none;
+  }
+  .questions ul li {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #d2d5e2;
+    padding: 20px 8% !important;
+  }
+  .questions ul li a.survey {
+    position: static;
+    margin: 10px 0 0 30px;
+  }
+  .questions ul li:last-of-type {
+    border-bottom: none;
+  }
+}
+@media (max-width: 480px) {
+  .questions {
+    padding: 20px 10px;
+  }
+  .questions ul li {
+    padding: 10px 0 !important;
+    font-size: 12px;
+  }
+  .questions ul li h3 {
+    font-size: 14px;
+  }
+  .questions ul li dl dd {
+    padding-left: 15px;
+  }
+  .questions ul li a.survey {
+    line-height: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
 }

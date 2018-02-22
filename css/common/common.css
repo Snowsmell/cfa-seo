@@ -175,7 +175,7 @@ a.survey:hover {
     margin: 0;
   }
   .recommend ul li div {
-    padding: 15px;
+    padding: 15px 10px;
     height: 128px;
   }
   .recommend ul li div h3 {
