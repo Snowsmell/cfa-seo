@@ -276,6 +276,7 @@ nav.sidebar {
     }
     div{
         display: none;
+        box-sizing: border-box;
         position: fixed;
         width: 30px;
         height: 30px;
@@ -283,8 +284,15 @@ nav.sidebar {
         left: -10px;
         border-radius: 50%;
         transition: all .5s;
-        background-color: #344b87;
+        background-color: #676b70;
         cursor: pointer;
+        line-height: 33px;
+        color:#fff;
+        text-align: right;
+        padding-right: 3px;
+        i.iconfont{
+            font-size: 18px;
+        }
     }
     @media(max-width:1366px){
         left: 2%;

@@ -48,9 +48,6 @@ $(function(){
         $('nav.sidebar').removeClass('current')
       }
     })
-
-
-
   }
   sidebar()
 })
