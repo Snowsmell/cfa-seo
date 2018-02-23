@@ -17,7 +17,7 @@ $(function(){
   //banner划出后显示导航
   function navshow(){
     $(window).on('scroll',function(){
-      if($(window).width() > 1024 && $(window).scrollTop()>$('.banner').height()){
+      if($(window).scrollTop()>$('.banner').height()){
         $('nav.sidebar').fadeIn()
       }else{
         $('nav.sidebar').fadeOut()
@@ -36,4 +36,21 @@ $(function(){
     })                          
   }
   changerate()
+  
+  // sidebar
+  function sidebar(){
+    $('nav.sidebar .hint').on('click',function(){
+      $('nav.sidebar').addClass('current')
+    })
+    $(window).on('click',function(e){
+      var src = e.target
+      if($(src).closest(".sidebar").length == 0){
+        $('nav.sidebar').removeClass('current')
+      }
+    })
+
+
+
+  }
+  sidebar()
 })

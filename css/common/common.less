@@ -230,9 +230,10 @@ nav.sidebar {
     top: 80px;
     left: 4%;
     width: 150px;    
+    z-index: 20;
+    transition: all .5s;
     a {
-        display: block;
-        opacity: 0;
+        display: block;        
         position: relative;
         border: 1px solid #344b87;
         color: #344b87;
@@ -273,8 +274,17 @@ nav.sidebar {
             }
         }
     }
-    &:hover{
-        a{opacity: 1}
+    div{
+        display: none;
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        top: 80px;
+        left: -10px;
+        border-radius: 50%;
+        transition: all .5s;
+        background-color: #344b87;
+        cursor: pointer;
     }
     @media(max-width:1366px){
         left: 2%;
@@ -293,6 +303,21 @@ nav.sidebar {
             }
         }
     }
+    @media(max-width:1200px){
+        left: -130px;
+        div{
+            display: block;
+        }
+        &.current{
+            left: 4%;
+            div{
+                width: 1px;
+                height: 1px;
+            }
+        }
+
+    }
+
 }
 
 //sidebar end

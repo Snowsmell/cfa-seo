@@ -216,10 +216,11 @@ nav.sidebar {
   top: 80px;
   left: 4%;
   width: 150px;
+  z-index: 20;
+  transition: all .5s;
 }
 nav.sidebar a {
   display: block;
-  opacity: 0;
   position: relative;
   border: 1px solid #344b87;
   color: #344b87;
@@ -261,8 +262,17 @@ nav.sidebar a.current span {
   background-color: #fff;
   color: #344b87;
 }
-nav.sidebar:hover a {
-  opacity: 1;
+nav.sidebar div {
+  display: none;
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  top: 80px;
+  left: -10px;
+  border-radius: 50%;
+  transition: all .5s;
+  background-color: #344b87;
+  cursor: pointer;
 }
 @media (max-width: 1366px) {
   nav.sidebar {
@@ -280,6 +290,21 @@ nav.sidebar:hover a {
     height: 28px;
     line-height: 28px;
     left: -13px;
+  }
+}
+@media (max-width: 1200px) {
+  nav.sidebar {
+    left: -130px;
+  }
+  nav.sidebar div {
+    display: block;
+  }
+  nav.sidebar.current {
+    left: 4%;
+  }
+  nav.sidebar.current div {
+    width: 1px;
+    height: 1px;
   }
 }
 .banner {
@@ -558,7 +583,8 @@ nav.sidebar:hover a {
     width: 100%;
   }
   .banner .wrap > div .centerimg {
-    width: 40%;
+    width: 35%;
+    height: 120px;
   }
   .banner .wrap > div .countdown {
     left: 10px;
