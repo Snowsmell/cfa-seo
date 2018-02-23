@@ -175,7 +175,7 @@ a.survey:hover {
     margin: 0;
   }
   .recommend ul li div {
-    padding: 15px;
+    padding: 15px 10px;
     height: 128px;
   }
   .recommend ul li div h3 {
@@ -213,13 +213,13 @@ a.survey:hover {
 nav.sidebar {
   display: none;
   position: fixed;
-  top: 120px;
+  top: 80px;
   left: 4%;
   width: 150px;
-  height: 600px;
 }
 nav.sidebar a {
   display: block;
+  opacity: 0;
   position: relative;
   border: 1px solid #344b87;
   color: #344b87;
@@ -229,6 +229,9 @@ nav.sidebar a {
   padding-left: 40px;
   margin-bottom: 15px;
   transition: all .5s;
+}
+nav.sidebar a:first-of-type {
+  opacity: 1;
 }
 nav.sidebar a span {
   position: absolute;
@@ -257,6 +260,27 @@ nav.sidebar a:hover span,
 nav.sidebar a.current span {
   background-color: #fff;
   color: #344b87;
+}
+nav.sidebar:hover a {
+  opacity: 1;
+}
+@media (max-width: 1366px) {
+  nav.sidebar {
+    left: 2%;
+    width: 120px;
+  }
+  nav.sidebar a {
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 12px;
+    padding-left: 32px;
+  }
+  nav.sidebar a span {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    left: -13px;
+  }
 }
 .banner {
   background: url("../images/banner-bg.jpg") no-repeat center center;
@@ -309,8 +333,9 @@ nav.sidebar a.current span {
 }
 .banner .wrap > div .countdown div b {
   line-height: 40px;
-  font-size: 24px;
-  margin: 0 5px;
+  font-size: 23px;
+  padding: 0 2px ;
+  margin: 0 1px;
   color: #ef4444;
   background-color: #2f3137;
 }
@@ -534,6 +559,7 @@ nav.sidebar a.current span {
   }
   .banner .wrap > div .centerimg {
     width: 40%;
+    height: 120px;
   }
   .banner .wrap > div .countdown {
     left: 10px;

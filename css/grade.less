@@ -1,52 +1,6 @@
 @import "./common/common.less";
-nav.sidebar {
-    display: none;
-    position: fixed;
-    top: 120px;
-    left: 4%;
-    width: 150px;
-    height: 600px;
-    a {
-        display: block;
-        position: relative;
-        border: 1px solid #344b87;
-        color: #344b87;
-        background: #fff;
-        height: 32px;
-        line-height: 32px;
-        padding-left: 40px;
-        margin-bottom: 15px;
-        transition: all .5s;
-        span {
-            position: absolute;
-            width: 36px;
-            height: 36px;
-            line-height: 36px;
-            border: 1px solid #344b87;
-            background-color: #344b87;
-            border-radius: 50%;
-            left: -14px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #fff;
-            text-align: center;
-            transition: all .5s;
-            i.iconfont {
-                font-weight: 600
-            }
-        }
-        &:hover,
-        &.current {
-            background-color: #344b87;
-            color: #fff;
-            span {
-                background-color: #fff;
-                color: #344b87;
-            }
-        }
-    }
-}
 
+  
 //banner start
 .banner {
     background: url("../images/banner-bg.jpg") no-repeat center center;
@@ -96,8 +50,9 @@ nav.sidebar {
                 div {
                     b {
                         line-height: 40px;
-                        font-size: 24px;
-                        margin: 0 5px;
+                        font-size: 23px;
+                        padding: 0 2px ;
+                        margin: 0 1px;
                         color: #ef4444;
                         background-color: #2f3137;
                     }
@@ -480,6 +435,7 @@ nav.sidebar {
       a{        
         padding: 15px 20px;  
         position: relative;
+        transition: all .5s;
         &:after{
           content:'';
           position: absolute;
@@ -491,7 +447,7 @@ nav.sidebar {
         }      
       }
       a.current{
-        font-weight: 600;
+        text-shadow: 1px 1px 3px #344b87;
         color:#344b87;
         &:after{
           background-color: #344b87
@@ -509,7 +465,11 @@ nav.sidebar {
     overflow-x: auto;
     img{
       max-width: 100%;
+      display: none;
       min-width: 960px;
+    }
+    img.current{
+        display: block;
     }
   }
   @media(max-width:768px){
