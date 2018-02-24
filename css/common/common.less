@@ -297,10 +297,11 @@ nav.sidebar {
     @media(max-width:1600px){
         left: 0%;
         width: 120px;
+        opacity: .3;
         a{
             height: 28px;
             line-height: 28px;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
             padding-left: 32px;
             border-radius: 14px 0 0 14px;
             span{
@@ -311,9 +312,13 @@ nav.sidebar {
             
             }
         }
+        &:hover{
+            opacity: 1;
+        }
     }
-    @media(max-width:1600px){
+    @media(max-width:1200px){
         left: -130px;
+        opacity: 1;
         div{
             display: block;
         }
