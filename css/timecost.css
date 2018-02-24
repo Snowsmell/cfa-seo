@@ -756,6 +756,15 @@ nav.sidebar div i.iconfont {
   max-width: 100%;
   min-width: 960px;
 }
+.detail section p.hint {
+  font-size: 12px;
+  color: #ccc;
+  display: none;
+  text-align: right;
+}
+.detail section p.hint b {
+  color: red;
+}
 .detail .caution {
   margin-top: 25px;
   position: relative;
@@ -788,6 +797,11 @@ nav.sidebar div i.iconfont {
   background-image: -moz-linear-gradient(0deg, #eac508 0%, #eaac05 100%);
   background-image: -webkit-linear-gradient(0deg, #eac508 0%, #eaac05 100%);
   background-image: -ms-linear-gradient(0deg, #eac508 0%, #eaac05 100%);
+}
+@media (max-width: 960px) {
+  .detail section p.hint {
+    display: block;
+  }
 }
 @media (max-width: 768px) {
   .detail {

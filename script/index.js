@@ -9,7 +9,7 @@ $(function(){
         text +="<b>"+v+"</b>"
       }
     })
-    $('.mbc>div')[0].innerHTML = text+' 天'
+    $('.mbc>div')[0].innerHTML = text+'天'
   }
   countdown('2018/6/23')
 
@@ -47,6 +47,13 @@ $(function(){
       if($(src).closest(".sidebar").length == 0){
         $('nav.sidebar').removeClass('current')
       }
+    })
+    var timer = null;
+    $(window).on('scroll',function(){
+      clearTimeout(timer)
+      timer = setTimeout(function(){
+        $('nav.sidebar').removeClass('current')
+      },0)      
     })
   }
   sidebar()
